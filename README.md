@@ -5,5 +5,5 @@
 <ul>
    <li><a href="">Basic Structure of Django</a></li>
    <li><a href="">urls, views and templates</a></li>
-   <li><a href="">user-credentials(login,logout,signup,password change</a></li>
+   <li><a href="https://github.com/bhanuprasad2607/mini-django/tree/main/src">user-credentials(login,logout,signup,password change</a></li>
 </ul>
