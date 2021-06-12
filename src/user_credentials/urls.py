@@ -12,10 +12,21 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+
+The URLs provided in accounts include django.contrib.auth.urls are:
+    1. accounts/login/[name = 'login']
+    2.accounts/logout/ [name='logout']
+    3.accounts/password_change/ [name='password_change']
+    4.accounts/password_change/done/ [name='password_change_done']
+    6.accounts/password_reset/ [name='password_reset']
+    7.accounts/password_reset/done/ [name='password_reset_done']
+    8.accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
+    9.accounts/reset/done/ [name='password_reset_complete']
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/',include('django.contrib.auth.urls')),
 ]
