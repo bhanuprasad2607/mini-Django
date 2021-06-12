@@ -22,11 +22,13 @@ The URLs provided in accounts include django.contrib.auth.urls are:
     7.accounts/password_reset/done/ [name='password_reset_done']
     8.accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
     9.accounts/reset/done/ [name='password_reset_complete']
+
+The auth files always checks for 'registeration/login.html' address pattern  
 """
 from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/',include('django.contrib.auth.urls')),
+    path('',include('login.urls')),
 ]
